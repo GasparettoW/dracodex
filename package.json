@@ -1,10 +1,10 @@
 {
-  "name": "sicredi-react-test",
+  "name": "dracodex",
   "description": "Application builded with React to list dragons from an API",
   "author": "William Gasparetto <gasparetto.w@gmail.com>",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/GasparettoW/sicredi-react-test#readme",
+  "homepage": "https://github.com/GasparettoW/dracodex#readme",
   "scripts": {
     "dev": "run-p dev:*",
     "dev:serve": "json-server --watch mocks/db.json --port 1234 --delay 1000 --routes mocks/routes.json",
