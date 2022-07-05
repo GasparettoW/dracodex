@@ -1,0 +1,63 @@
+{
+  "dragon": [
+    {
+      "id": 2,
+      "name": "Dragão Tiburcio da Nicaragua",
+      "type": "fogo",
+      "updatedAt": "2022-07-04T12:34:47.458Z"
+    },
+    {
+      "id": 3,
+      "name": "Dragão do Pé de Feijão",
+      "type": "agua",
+      "createdAt": "2020-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "name": "Dragão Amarelão",
+      "type": "areia",
+      "updatedAt": "2022-07-04T13:13:21.767Z"
+    },
+    {
+      "id": 5,
+      "name": "Dragão da Barriga Verde",
+      "type": "venenoso",
+      "createdAt": "2020-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "name": "Draconato de Montecristo",
+      "type": "noturno",
+      "updatedAt": "2022-07-04T13:10:26.086Z"
+    },
+    {
+      "name": "Espadúrcio",
+      "type": "agua",
+      "createdAt": "2022-07-04T14:47:53.919Z",
+      "id": 7
+    },
+    {
+      "name": "Dragonite",
+      "type": "areia",
+      "createdAt": "2022-07-04T19:06:53.272Z",
+      "id": 8
+    }
+  ],
+  "user": [
+    {
+      "id": "admin",
+      "name": "Admin",
+      "dragons": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "eldest",
+      "name": "Eragon",
+      "dragons": [
+        1
+      ]
+    }
+  ]
+}
