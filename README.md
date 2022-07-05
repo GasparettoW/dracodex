@@ -14,7 +14,7 @@
 <p align="center">
   <a href="#get-started">Get Started</a> |
   <a href="#credentials">Credentials</a> |
-  <a href="#credentials">Builded with</a>
+  <a href="#builded-with">Builded with</a>
 </p>
 
 ## Get Started
