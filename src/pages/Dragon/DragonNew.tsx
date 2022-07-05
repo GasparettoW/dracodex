@@ -67,7 +67,7 @@ export const DragonNew = () => {
             value={name}
             name='dragonName'
             prefixIcon='dragon'
-            size='lg'
+            inputSize='lg'
             required
             onChange={(e) => {
               setName(e.target.value)
@@ -80,7 +80,7 @@ export const DragonNew = () => {
             name='dragonType'
             value={type}
             prefixIcon='fire-flame-curved'
-            size='sm'
+            inputSize='sm'
             required
             onChange={(e) => {
               setType(e.target.value)
