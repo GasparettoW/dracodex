@@ -66,7 +66,6 @@ export const Input = ({
   prefixIcon,
   sufixIcon,
   onChange,
-  ref,
   inputSize,
   required,
 }: InputProps) => {
@@ -85,7 +84,6 @@ export const Input = ({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        ref={ref}
         inputSize={inputSize}
         required={required}
       />

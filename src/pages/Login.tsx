@@ -34,10 +34,6 @@ export const Login = () => {
   const [errorMessage, setErrorMessage] = useState<any>('')
 
   useEffect(() => {
-    userRef.current?.focus()
-  }, [])
-
-  useEffect(() => {
     setErrorMessage('')
   }, [username, password])
 
@@ -65,7 +61,6 @@ export const Login = () => {
                 prefixIcon='user-ninja'
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                innerref={userRef}
               />
             </Field>
             <Field>
