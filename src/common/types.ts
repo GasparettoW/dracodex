@@ -3,7 +3,7 @@ import { MutableRefObject } from 'react'
 export interface Dragon {
   name: string
   type: string
-  id?: string
+  id?: string | null
   createdAt?: string
   updatedAt?: string
   histories?: History[]
