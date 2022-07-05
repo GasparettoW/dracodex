@@ -52,15 +52,18 @@ export const DragonList = () => {
           </Action>
         </Header>
         <DragonContainer>
-          {dragons.sort(sortByNameAsc).map(({ id, name, type }: DragonType) => (
-            <DragonCard
-              key={id}
-              id={id}
-              title={name}
-              tag={type}
-              to={`/dragon/${id}`}
-            ></DragonCard>
-          ))}
+          {dragons
+            .filter(({ name, type }) => name && type)
+            .sort(sortByNameAsc)
+            .map(({ id, name, type }: DragonType) => (
+              <DragonCard
+                key={id}
+                id={id}
+                title={name}
+                tag={type}
+                to={`/dragon/${id}`}
+              ></DragonCard>
+            ))}
         </DragonContainer>
       </PageContainer>
     </>

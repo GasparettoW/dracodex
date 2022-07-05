@@ -3,7 +3,7 @@ import { FullPageContainer } from '../styles'
 import { color } from '../styles/variables'
 import { Loader } from './Loader'
 
-const LoadPageStyle = styled(FullPageContainer)`
+const LoadPageStyled = styled(FullPageContainer)`
   position: absolute;
   transition: all 0.8s ease-in-out;
   background: ${color.white};
@@ -19,12 +19,10 @@ const LoadPageStyle = styled(FullPageContainer)`
   }
 `
 
-export const LoadPage = ({ loading }: any) => {
+export const LoadPage = ({ loading }: { loading: boolean }) => {
   return (
-    <>
-      <LoadPageStyle className={loading ? 'loading' : 'isHidden'}>
-        <Loader></Loader>
-      </LoadPageStyle>
-    </>
+    <LoadPageStyled className={loading ? 'loading' : 'isHidden'}>
+      <Loader></Loader>
+    </LoadPageStyled>
   )
 }

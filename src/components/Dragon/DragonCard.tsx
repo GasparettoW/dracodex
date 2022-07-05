@@ -68,26 +68,24 @@ export const DragonCard = ({
 }: DragonCardProps) => {
   const navigate = useNavigate()
   return (
-    <>
-      <StyledDragonCard>
-        <CardImage
-          src={image || placeholder}
-          alt={title}
-          onClick={() => {
-            navigate(to)
-          }}
-        />
-        <CardContent>
-          <OptionBar>
-            <Id>#{id}</Id>
-            <Tag type={tag}>{tag}</Tag>
-          </OptionBar>
-          <StyledLink key={id} to={to}>
-            <Title>{title}</Title>
-          </StyledLink>
-          <p>{description}</p>
-        </CardContent>
-      </StyledDragonCard>
-    </>
+    <StyledDragonCard>
+      <CardImage
+        src={image || placeholder}
+        alt={title}
+        onClick={() => {
+          navigate(to)
+        }}
+      />
+      <CardContent>
+        <OptionBar>
+          <Id>#{id}</Id>
+          <Tag type={tag}>{tag}</Tag>
+        </OptionBar>
+        <StyledLink key={id} to={to}>
+          <Title>{title}</Title>
+        </StyledLink>
+        <p>{description}</p>
+      </CardContent>
+    </StyledDragonCard>
   )
 }

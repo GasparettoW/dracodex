@@ -35,15 +35,13 @@ export const FilterItem = ({
 }: any) => {
   const { activeFilter } = useContext(FilterContext)
   return (
-    <>
-      <FilterItemStyled {...props} onClick={onClick}>
-        {children}
-        <IconBox>
-          {activeFilter === name && (
-            <FilterIcon className={`fa-solid fa-arrow-${order}`}></FilterIcon>
-          )}
-        </IconBox>
-      </FilterItemStyled>
-    </>
+    <FilterItemStyled {...props} onClick={onClick}>
+      {children}
+      <IconBox>
+        {activeFilter === name && (
+          <FilterIcon className={`fa-solid fa-arrow-${order}`}></FilterIcon>
+        )}
+      </IconBox>
+    </FilterItemStyled>
   )
 }

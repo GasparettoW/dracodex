@@ -4,7 +4,7 @@ export interface Dragon {
   name: string
   type: string
   id?: string | null
-  createdAt?: string
+  createdAt?: string | number
   updatedAt?: string
   histories?: History[]
 }
@@ -39,7 +39,7 @@ export type CardProps = {
 }
 
 export type DragonCardProps = CardProps & {
-  id?: string
+  id?: string | null
   to: string
   tag: string
 }
