@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle, css } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import { color, space, font, border, size, transition } from './variables'
 
 export const Reset = createGlobalStyle`
@@ -15,19 +15,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 `
 
-export const Title = styled.h1`
-  color: ${color.black};
-  font-size: ${font.size.title};
-`
-
-export const Subtitle = styled.p`
-  color: ${color.gray[400]};
-
-  &.center {
-    text-align: center;
-  }
-`
-
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -38,12 +25,6 @@ export const Container = styled.div`
 
 export const LogoContainer = styled(Container)`
   gap: ${space.lg};
-`
-
-export const Brand = styled.h1`
-  font-family: ${font.family.brand};
-  font-size: ${font.size.brand};
-  color: ${color.black};
 `
 
 export const FullPageContainer = styled(Container)`
@@ -76,6 +57,12 @@ export const DragonContainer = styled(Container)`
   justify-content: space-between;
 `
 
+export const Brand = styled.h1`
+  font-family: ${font.family.brand};
+  font-size: ${font.size.brand};
+  color: ${color.black};
+`
+
 export const Logo = styled.img`
   height: 160px;
 `
@@ -84,6 +71,19 @@ export const CoverImg = styled.img`
   width: 100%;
   height: 150px;
   object-fit: cover;
+`
+
+export const Title = styled.h1`
+  color: ${color.black};
+  font-size: ${font.size.title};
+`
+
+export const Subtitle = styled.p`
+  color: ${color.gray[400]};
+
+  &.center {
+    text-align: center;
+  }
 `
 
 export const Field = styled.div`
@@ -159,9 +159,10 @@ export const ActionBar = styled.div`
   flex-direction: column;
 `
 
-export const Action = styled.div<{
+type ActionProps = {
   type?: 'danger'
-}>`
+}
+export const Action = styled.div<ActionProps>`
   width: fit-content;
   color: ${color.gray[600]};
   font-size: ${font.size.md};
@@ -177,7 +178,7 @@ export const Action = styled.div<{
     text-decoration: underline;
 
     & i {
-      color: ${({ type }: any) =>
+      color: ${({ type }) =>
         type === 'danger' ? color.red[600] : color.blue[500]};
     }
   }
