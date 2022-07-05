@@ -5,7 +5,7 @@ import { useContext } from 'react'
 import { AuthContext } from '../contexts/auth'
 import { useNavigate } from 'react-router-dom'
 
-const StyledHeader = styled.header`
+const HeaderStyled = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,21 +51,19 @@ export const Header = () => {
   const navigate = useNavigate()
   const { user, logout } = useContext(AuthContext)
   return (
-    <>
-      <StyledHeader>
-        <LogoContainer
-          onClick={() => {
-            navigate('/')
-          }}
-        >
-          <Logo src={logo} alt='' />
-          Dracodex
-        </LogoContainer>
-        <ActionContainer>
-          <P>{user}</P>
-          <Button onClick={() => logout()}>Logout</Button>
-        </ActionContainer>
-      </StyledHeader>
-    </>
+    <HeaderStyled>
+      <LogoContainer
+        onClick={() => {
+          navigate('/')
+        }}
+      >
+        <Logo src={logo} alt='' />
+        Dracodex
+      </LogoContainer>
+      <ActionContainer>
+        <P>{user}</P>
+        <Button onClick={() => logout()}>Logout</Button>
+      </ActionContainer>
+    </HeaderStyled>
   )
 }

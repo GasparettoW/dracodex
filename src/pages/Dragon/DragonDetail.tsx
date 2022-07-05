@@ -11,6 +11,7 @@ import {
   Icon,
   Id,
   CoverImg,
+  Subtitle,
 } from '@/styles'
 import { border, color, font, space } from '@/styles/variables'
 import { LoadPage } from '@/components/LoadPage'
@@ -38,6 +39,12 @@ const Title = styled.h4`
   font-size: ${font.size.title};
   font-weight: ${font.weight.bold};
   text-decoration: none;
+`
+
+const P = styled.p`
+  font-size: ${font.size.sm};
+  margin-top: ${space.xs};
+  color: ${color.gray[500]};
 `
 
 export const DragonDetail = (): JSX.Element => {
@@ -74,6 +81,20 @@ export const DragonDetail = (): JSX.Element => {
           <Tag type={dragon?.type}>{dragon?.type}</Tag>
         </OptionBar>
         <Title>{dragon?.name}</Title>
+        {dragon?.createdAt && (
+          <P>{`Criado em 
+        ${new Date(dragon.createdAt).toLocaleDateString('pt-BR')}
+         às 
+         ${new Date(dragon.createdAt).toLocaleTimeString('pt-BR')}
+         `}</P>
+        )}
+        {dragon?.updatedAt && (
+          <P>{`Alterado em 
+        ${new Date(dragon.updatedAt).toLocaleDateString('pt-BR')}
+         às 
+         ${new Date(dragon.updatedAt).toLocaleTimeString('pt-BR')}
+         `}</P>
+        )}
         <ActionBarStyled>
           <Action
             onClick={() => {

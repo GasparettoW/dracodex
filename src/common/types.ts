@@ -3,8 +3,8 @@ import { MutableRefObject } from 'react'
 export interface Dragon {
   name: string
   type: string
-  id?: string
-  createdAt?: string
+  id?: string | null
+  createdAt?: string | number
   updatedAt?: string
   histories?: History[]
 }
@@ -26,8 +26,9 @@ export type InputProps = {
   prefixIcon?: string
   sufixIcon?: string
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
+  innerref?: React.Ref<HTMLInputElement> | MutableRefObject<HTMLInputElement>
   ref?: React.Ref<HTMLInputElement> | MutableRefObject<HTMLInputElement>
-  size?: 'sm' | 'md' | 'lg'
+  inputSize?: 'sm' | 'md' | 'lg'
   required?: boolean
 }
 
@@ -39,7 +40,7 @@ export type CardProps = {
 }
 
 export type DragonCardProps = CardProps & {
-  id?: string
+  id?: string | null
   to: string
   tag: string
 }

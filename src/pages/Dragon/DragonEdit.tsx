@@ -37,17 +37,15 @@ const ActionBarStyled = styled(ActionBar)`
 
 export const DragonEdit = (): JSX.Element => {
   const { dragonId } = useParams()
-
-  const navigate = useNavigate()
-  if (!dragonId) {
-    return <>{navigate('/dragon')}</>
-  }
-
   const [loading, setLoadingState] = useState(true)
   const [name, setName] = useState('')
   const [type, setType] = useState('')
+  const navigate = useNavigate()
 
   useEffect(() => {
+    if (!dragonId) {
+      return navigate('/dragon')
+    }
     Api.Dragon.get(dragonId)
       .then((dragon) => {
         setName(dragon.name)
@@ -79,7 +77,7 @@ export const DragonEdit = (): JSX.Element => {
             value={name}
             name='dragonName'
             prefixIcon='dragon'
-            size='lg'
+            inputSize='lg'
             required
             onChange={(e) => {
               setName(e.target.value)
@@ -92,7 +90,7 @@ export const DragonEdit = (): JSX.Element => {
             name='dragonType'
             value={type}
             prefixIcon='fire-flame-curved'
-            size='sm'
+            inputSize='sm'
             required
             onChange={(e) => {
               setType(e.target.value)

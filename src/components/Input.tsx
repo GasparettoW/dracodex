@@ -4,14 +4,14 @@ import { InputProps } from '../common/types'
 import { color, space, font, border } from '../styles/variables'
 
 const InputStyled = styled.input`
-  width: ${({ size }: any) => {
-    if (size === 'sm') {
+  width: ${({ inputSize }: { inputSize?: string }) => {
+    if (inputSize === 'sm') {
       return '130px'
     }
-    if (size === 'md') {
+    if (inputSize === 'md') {
       return '240px'
     }
-    if (size === 'lg') {
+    if (inputSize === 'lg') {
       return '300px'
     }
     return '100%'
@@ -67,7 +67,7 @@ export const Input = ({
   sufixIcon,
   onChange,
   ref,
-  size,
+  inputSize,
   required,
 }: InputProps) => {
   const [hidePassword, setHidePassword] = useState(true)
@@ -86,7 +86,7 @@ export const Input = ({
         value={value}
         onChange={onChange}
         ref={ref}
-        size={size}
+        inputSize={inputSize}
         required={required}
       />
       <SufixIcon
