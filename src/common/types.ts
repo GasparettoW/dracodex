@@ -26,8 +26,12 @@ export type InputProps = {
   prefixIcon?: string
   sufixIcon?: string
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
-  innerref?: React.Ref<HTMLInputElement> | MutableRefObject<HTMLInputElement>
-  ref?: React.Ref<HTMLInputElement> | MutableRefObject<HTMLInputElement>
+  innerref?:
+    | React.Ref<HTMLInputElement>
+    | MutableRefObject<HTMLInputElement | undefined>
+  ref?:
+    | React.Ref<HTMLInputElement>
+    | MutableRefObject<HTMLInputElement | undefined>
   inputSize?: 'sm' | 'md' | 'lg'
   required?: boolean
 }

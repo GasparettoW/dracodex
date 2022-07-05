@@ -145,11 +145,6 @@ export const Label = styled.label<{ htmlFor: string }>`
   color: ${color.gray[800]};
 `
 
-export const ErrorMessage = styled.p`
-  font-size: ${font.size.md};
-  color: ${color.red[600]};
-`
-
 export const ActionBar = styled.div`
   margin-top: ${space.xxl};
   padding-top: ${space.md};
