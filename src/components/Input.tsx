@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styled from 'styled-components'
-import { InputProps } from '../common/types'
-import { color, space, font, border } from '../styles/variables'
+import { InputProps } from '@/common/types'
+import { color, space, font, border } from '@/styles/variables'
 
 const InputStyled = styled.input`
   width: ${({ inputSize }: { inputSize?: string }) => {

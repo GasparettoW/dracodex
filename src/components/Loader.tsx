@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { color } from '../styles/variables'
+import { color } from '@/styles/variables'
 
 export const Loader = styled.div`
   border: 6px solid #f3f3f3;

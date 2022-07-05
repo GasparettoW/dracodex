@@ -17,6 +17,7 @@ import { border, color, font, space } from '@/styles/variables'
 import { LoadPage } from '@/components/LoadPage'
 import { Tag } from '@/components/Tag'
 import placeholder from '@/assets/placeholder-dragon.png'
+import useMountEffect from '@/hooks/useMountEffect'
 
 const CardContainer = styled(Container)`
   background: ${color.white};
@@ -57,11 +58,11 @@ export const DragonDetail = (): JSX.Element => {
   const [loading, setLoadingState] = useState(true)
   const [dragon, setDragon] = useState<Dragon>()
 
-  useEffect(() => {
+  useMountEffect(() => {
     Api.Dragon.get(dragonId)
       .then(setDragon)
       .finally(() => setLoadingState(false))
-  }, [])
+  })
 
   return (
     <>

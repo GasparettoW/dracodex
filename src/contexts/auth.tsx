@@ -12,6 +12,7 @@ export const AuthContext = createContext({
 export const AuthProvider = ({ children }: any) => {
   const navigate = useNavigate()
   const [user, setUser] = useState('')
+
   const login = ({ username, password }: User) => {
     const errors = validateUser({
       username,
@@ -23,10 +24,12 @@ export const AuthProvider = ({ children }: any) => {
     setUser(username)
     navigate('/dragon')
   }
+
   const logout = () => {
     setUser('')
     navigate('/login')
   }
+
   return (
     <AuthContext.Provider
       value={{ isAuthenticated: !!user, user, login, logout }}

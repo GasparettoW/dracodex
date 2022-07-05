@@ -17,6 +17,7 @@ import { border, color, space } from '@/styles/variables'
 import { LoadPage } from '@/components/LoadPage'
 import { Input } from '@/components/Input'
 import placeholder from '@/assets/placeholder-dragon.png'
+import useMountEffect from '@/hooks/useMountEffect'
 
 const CardContainer = styled(Container)`
   background: ${color.white};
@@ -42,7 +43,7 @@ export const DragonEdit = (): JSX.Element => {
   const [type, setType] = useState('')
   const navigate = useNavigate()
 
-  useEffect(() => {
+  useMountEffect(() => {
     if (!dragonId) {
       return navigate('/dragon')
     }
@@ -52,7 +53,7 @@ export const DragonEdit = (): JSX.Element => {
         setType(dragon.type)
       })
       .finally(() => setLoadingState(false))
-  }, [])
+  })
 
   return (
     <>

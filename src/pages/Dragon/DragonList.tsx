@@ -13,6 +13,7 @@ import {
 import { Dragon as DragonType } from '@/common/types'
 import { LoadPage } from '@/components/LoadPage'
 import { DragonCard } from '@/components/Dragon/DragonCard'
+import useMountEffect from '@/hooks/useMountEffect'
 
 const Header = styled(Container)`
   width: 100%;
@@ -30,11 +31,11 @@ export const DragonList = () => {
   const [loading, setLoadingState] = useState(true)
   const navigate = useNavigate()
 
-  useEffect(() => {
+  useMountEffect(() => {
     Api.Dragon.getAll()
       .then(setDragons)
       .finally(() => setLoadingState(false))
-  }, [])
+  })
 
   return (
     <>
