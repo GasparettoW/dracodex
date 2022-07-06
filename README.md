@@ -8,7 +8,7 @@
 </h2>
 
 <p align="center">
-  An React App to view and manage (i.e. edit, remove and create) a list of Dragons 
+  A React App to view and manage (i.e. edit, remove and create) a list of Dragons 
 </p>
 
 <p align="center">
