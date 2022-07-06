@@ -60,7 +60,10 @@ export const DragonDetail = (): JSX.Element => {
 
   useMountEffect(() => {
     Api.Dragon.get(dragonId)
-      .then(setDragon)
+      .then((dragon) => {
+        console.log(dragon)
+        setDragon(dragon)
+      })
       .finally(() => setLoadingState(false))
   })
 

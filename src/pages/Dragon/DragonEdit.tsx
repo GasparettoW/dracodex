@@ -106,9 +106,7 @@ export const DragonEdit = (): JSX.Element => {
                 name,
                 type,
                 updatedAt: new Date().toISOString(),
-              }).then((dragon) => {
-                navigate(`/dragon/${dragon.id}`)
-              })
+              }).then(() => navigate(`/dragon/${dragonId}`))
             }}
           >
             <Icon className='fa-solid fa-check'></Icon>

@@ -27,8 +27,6 @@ const ErrorMessage = styled.p`
 export const Login = () => {
   const { login } = useContext(AuthContext)
 
-  const userRef = useRef<HTMLInputElement>()
-
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [errorMessage, setErrorMessage] = useState<any>('')
@@ -76,9 +74,7 @@ export const Login = () => {
             </Field>
           </Container>
           <Container>
-            <ErrorMessage className={!!errorMessage ? 'error' : 'isHidden'}>
-              {errorMessage}
-            </ErrorMessage>
+            {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
           </Container>
           <Button
             type='submit'
