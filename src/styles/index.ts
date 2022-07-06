@@ -1,5 +1,13 @@
 import styled, { createGlobalStyle } from 'styled-components'
-import { color, space, font, border, size, transition } from './variables'
+import {
+  color,
+  space,
+  font,
+  border,
+  size,
+  transition,
+  breakpoint,
+} from './variables'
 
 export const Reset = createGlobalStyle`
   *{
@@ -25,6 +33,10 @@ export const Container = styled.div`
 
 export const LogoContainer = styled(Container)`
   gap: ${space.lg};
+
+  @media (min-width: ${breakpoint.md}) {
+    gap: ${space.xl};
+  }
 `
 
 export const FullPageContainer = styled(Container)`
@@ -43,6 +55,9 @@ export const LoginContainer = styled(Container)`
   padding: ${space.container} ${space.section};
   gap: ${space.section};
   width: ${size.container};
+
+  @media (max-width: ${size.container}) {
+  }
 `
 
 export const FormContainer = styled(Container)`

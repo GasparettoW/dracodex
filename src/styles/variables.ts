@@ -1,3 +1,29 @@
+export const size = {
+  container: '400px',
+}
+
+const device = {
+  mobile: {
+    sm: '320px',
+    md: '480px',
+    lg: '640px',
+  },
+  tablet: '768px',
+  desktop: {
+    sm: '1024px',
+    md: '1440px',
+    lg: '2560px',
+  },
+}
+
+export const breakpoint = {
+  xs: `(min-width: ${device.mobile.sm})`,
+  sm: `(min-width: ${device.mobile.md})`,
+  md: `(min-width: ${device.tablet})`,
+  lg: `(min-width: ${device.desktop.sm})`,
+  xl: `(min-width: ${device.desktop.md})`,
+}
+
 export const color = {
   black: '#1e293b',
   white: '#fff',
@@ -105,10 +131,6 @@ export const border = {
     md: '16px',
     lg: '30px',
   },
-}
-
-export const size = {
-  container: '400px',
 }
 
 export const transition = {
